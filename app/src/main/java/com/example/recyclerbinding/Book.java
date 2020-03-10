@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class Book {
 
     @SerializedName("id")
-    private String id;
+    private Integer id;
 
     @SerializedName("title")
     private String title;
@@ -17,13 +17,14 @@ public class Book {
     private String description;
 
     @SerializedName("published")
-    private String published;
+    private Integer published;
 
-    public String getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -51,11 +52,11 @@ public class Book {
         this.description = description;
     }
 
-    public String getPublished() {
+    public Integer getPublished() {
         return published;
     }
 
-    public void setPublished(String published) {
+    public void setPublished(Integer published) {
         this.published = published;
     }
 }

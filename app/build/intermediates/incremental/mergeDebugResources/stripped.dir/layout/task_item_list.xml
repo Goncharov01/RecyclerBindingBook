@@ -14,7 +14,7 @@ android:layout_height="wrap_content" android:tag="layout/task_item_list_0" xmlns
 
     <TextView
         android:id="@+id/bookId"
-        android:tag="binding_1"   
+        android:tag="binding_1"                   
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -45,7 +45,7 @@ android:layout_height="wrap_content" android:tag="layout/task_item_list_0" xmlns
 
     <TextView
         android:id="@+id/bookPublished"
-        android:tag="binding_5"          
+        android:tag="binding_5"                          
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"

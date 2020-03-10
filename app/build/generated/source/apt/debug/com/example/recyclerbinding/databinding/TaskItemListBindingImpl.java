@@ -102,9 +102,13 @@ public class TaskItemListBindingImpl extends TaskItemListBinding  {
         com.example.recyclerbinding.Book model = mModel;
         java.lang.String modelAuthor = null;
         java.lang.String modelTitle = null;
-        java.lang.String modelPublished = null;
-        java.lang.String modelId = null;
+        java.lang.Integer modelPublished = null;
+        java.lang.String stringValueOfModelPublished = null;
+        java.lang.String stringValueOfModelId = null;
         java.lang.String modelDescription = null;
+        java.lang.Integer modelId = null;
+        int androidxDatabindingViewDataBindingSafeUnboxModelId = 0;
+        int androidxDatabindingViewDataBindingSafeUnboxModelPublished = 0;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -117,11 +121,23 @@ public class TaskItemListBindingImpl extends TaskItemListBinding  {
                     modelTitle = model.getTitle();
                     // read model.published
                     modelPublished = model.getPublished();
-                    // read model.id
-                    modelId = model.getId();
                     // read model.description
                     modelDescription = model.getDescription();
+                    // read model.id
+                    modelId = model.getId();
                 }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(model.published)
+                androidxDatabindingViewDataBindingSafeUnboxModelPublished = androidx.databinding.ViewDataBinding.safeUnbox(modelPublished);
+                // read androidx.databinding.ViewDataBinding.safeUnbox(model.id)
+                androidxDatabindingViewDataBindingSafeUnboxModelId = androidx.databinding.ViewDataBinding.safeUnbox(modelId);
+
+
+                // read String.valueOf(androidx.databinding.ViewDataBinding.safeUnbox(model.published))
+                stringValueOfModelPublished = java.lang.String.valueOf(androidxDatabindingViewDataBindingSafeUnboxModelPublished);
+                // read String.valueOf(androidx.databinding.ViewDataBinding.safeUnbox(model.id))
+                stringValueOfModelId = java.lang.String.valueOf(androidxDatabindingViewDataBindingSafeUnboxModelId);
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
@@ -129,8 +145,8 @@ public class TaskItemListBindingImpl extends TaskItemListBinding  {
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookAuthor, modelAuthor);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookDescription, modelDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookId, modelId);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookPublished, modelPublished);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookId, stringValueOfModelId);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookPublished, stringValueOfModelPublished);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.bookTitle, modelTitle);
         }
     }

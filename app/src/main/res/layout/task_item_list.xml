@@ -14,7 +14,7 @@ android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/bookId"
-        android:text="@{model.id}"
+        android:text="@{String.valueOf(model.id)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -45,7 +45,7 @@ android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/bookPublished"
-        android:text="@{model.published}"
+        android:text="@{String.valueOf(model.published)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"

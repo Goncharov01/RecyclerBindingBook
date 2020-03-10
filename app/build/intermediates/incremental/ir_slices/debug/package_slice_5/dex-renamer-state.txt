@@ -1,4 +1,4 @@
-#Tue Mar 10 20:55:00 MSK 2020
+#Wed Mar 11 00:59:58 MSK 2020
 base.0=C\:\\Users\\1\\AndroidStudioProjects\\RecyclerBinding\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex
