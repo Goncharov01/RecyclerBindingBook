@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                        
+    
+    
+                 
+                        
+                                                      
+           
+
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="wrap_content" android:tag="layout/task_item_list_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/bookId"
+        android:tag="binding_1"   
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="20dp"/>
+    <TextView
+        android:id="@+id/bookTitle"
+        android:tag="binding_2"      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/bookAuthor"
+        android:tag="binding_3"       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/bookDescription"
+        android:tag="binding_4"            
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/bookPublished"
+        android:tag="binding_5"          
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20sp" />
+
+</LinearLayout>
+         

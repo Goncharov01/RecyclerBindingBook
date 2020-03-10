@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\1\\AndroidStudioProjects\\RecyclerBinding\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\1\\AndroidStudioProjects\\RecyclerBinding\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\1\\AndroidStudioProjects\\RecyclerBinding\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\task_item_list.xml",
+        "source": "C:\\Users\\1\\AndroidStudioProjects\\RecyclerBinding\\app\\src\\main\\res\\layout\\task_item_list.xml"
+    }
+]
