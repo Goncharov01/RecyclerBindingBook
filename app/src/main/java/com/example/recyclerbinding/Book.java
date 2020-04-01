@@ -1,5 +1,7 @@
 package com.example.recyclerbinding;
 
+import androidx.lifecycle.LiveData;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Book {
@@ -19,6 +21,16 @@ public class Book {
     @SerializedName("published")
     private Integer published;
 
+    public Book(Integer id, String title, String author, String description, Integer published) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.published = published;
+    }
+
+    public Book() {
+    }
 
     public Integer getId() {
         return id;
@@ -58,5 +70,17 @@ public class Book {
 
     public void setPublished(Integer published) {
         this.published = published;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", description='" + description + '\'' +
+                ", published=" + published +
+                '}';
     }
 }

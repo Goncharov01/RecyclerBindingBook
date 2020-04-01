@@ -21,6 +21,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.recyclerbinding.SecondActivity" />
         <activity android:name="com.example.recyclerbinding.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,8 +31,9 @@
         </activity>
 
         <provider
-            android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.example.recyclerbinding.com.android.tools.ir.server.InstantRunContentProvider"
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.recyclerbinding.lifecycle-process"
+            android:exported="false"
             android:multiprocess="true" />
     </application>
 

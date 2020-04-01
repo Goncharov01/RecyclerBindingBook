@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     Disposable disposable = null;
 
-    private BookApi taskApiService() {
-        return RetrofitClient.getApi();
-    }
+//    private BookApi taskApiService() {
+//        return RetrofitClient.getApi();
+//    }
 
     public List<Book> books = new ArrayList<>();
 
@@ -37,14 +40,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        Cat cat = new Cat();
+        cat.id = 1;
+        Cat.setName("qwerty");
+        System.out.println(cat.id  + " " + cat.getName());
+
+        Cat catt = new Cat();
+        catt.id = 2;
+        catt.setName("QQQ");
+        System.out.println(catt.id + " " + catt.getName());
+        System.out.println(cat.id  + " " + cat.getName());
+
+
+        BookViewModel bookViewModel = ViewModelProviders.of(this).get(BookViewModel.class);
 
         adapterRecycler = new AdapterRecycler(this, books);
-        binding.setMyyAdapter(adapterRecycler);
 
-        disposable = taskApiService().getBooks()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(list -> adapterRecycler.onChange(list));
+        binding.setMyyAdapter(adapterRecycler);
+        binding.setButtonAdapter(bookViewModel);
+
+
+        bookViewModel.getBooks().observe(this, new Observer<List<Book>>() {
+            @Override
+            public void onChanged(List<Book> books) {
+                adapterRecycler.onChange(books);
+            }
+        });
+
 
     }
 

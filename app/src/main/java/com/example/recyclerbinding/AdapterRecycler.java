@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.example.recyclerbinding.databinding.TaskItemListBinding;
 
 import java.util.ArrayList;
