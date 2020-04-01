@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="addBook"
+            type="com.example.recyclerbinding.BookAddViewModel" />
+    </data>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="177dp" />
+        <EditText
+            android:id="@+id/editBookId"
+            android:text="@={addBook.id}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="177dp" />
+        <EditText
+            android:id="@+id/editTitle"
+            android:text="@={addBook.title}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/textViewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="177dp" />
+        <EditText
+            android:id="@+id/editAuthor"
+            android:text="@={addBook.author}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="177dp" />
+        <EditText
+            android:id="@+id/editDescription"
+            android:text="@={addBook.description}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/textViewPublishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publish Date"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="177dp" />
+        <EditText
+            android:id="@+id/editDatePublish"
+            android:text="@={addBook.published}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:onClick="@{ () -> addBook.save()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="106dp" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="190dp" />
+    </LinearLayout>
+
+</layout>
